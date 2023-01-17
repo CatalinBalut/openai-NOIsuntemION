@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Secret Code';
+    src: url('./assets/font/SECRCODE.TTF');
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('./assets/font/Alliance-No.2-Regular.otf');
+}
+body {
+    margin: 0;
+    background: #08082b;
+    min-height: 100vh;
+}
+.record-box,
+.response-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    width: 248.32px;
+    height: 320px;
+    background: linear-gradient(90deg, #f894ff 0%, #00c5e9 100%);
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    transition: all 0.4s ease-in;
+    margin: 0 auto;
+    margin-top: 32px;
+    border-radius: 124px;
+}
+
+.record-box::before {
+    height: 185.72991943359375px;
+    width: 85.573486328125px;
+    background-image: url(assets/I.png);
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: 68px;
+}
+  
+.record-box::after {
+    height: 186.42251586914062px;
+    width: 189.04287719726562px;
+    background-image: url(assets/N.png);
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    top: 68px;
+    right: -215px;
+}
+
+.record-box.record-box__working,
+.response-box {
+    width: 800px;
+    background: linear-gradient(90deg,
+      rgba(248, 148, 255, 0.35) 0%,
+      rgba(248, 148, 255, 0.15) 41.89%,
+      #00c5e9 100%);
+    mix-blend-mode: normal;
+    border-radius: 124px;
+    height: 393px;
+}
+
+
+.record-box .left-side {
+    background-color: transparent;
+    height: auto;
+    padding: 48px;
+    padding-top: 0px;
+    padding-bottom: 60px;
+    margin-top: 48px;
+    max-width: 435px;
+    width: 50%;
+}
+
+.record-box .right-side {
+    background: #08082b;
+    border-radius: 108px;
+    overflow: hidden;
+    width: 383px;
+    margin-top: 24px;
+    margin-right: 24px;
+    height: 345px;
+    position: relative;
+}
+
+.left-title {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.left-title-big{
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 10px;
+}
+
+.left-first-message{
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.left-second-message{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 20px;
+    width: 274px;
+    height: 60px;
+    background: #08082B;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.left-last-message {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    flex: none;
+    order: 3;
+}
+
+.response-box {
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.response-box h3 {
+    color: #fff;
+}
+
+.response-content {
+    height: 345px;
+    width: 55%;
+    background: #08082b;
+    border-radius: 108px;
+    overflow-y: auto;
+    position: relative;
+    margin: 0 10px;
+}
+
+.response-content .response {
+    font-family: "Secret Code";
+    color: #fff;
+    line-height: 1.2;
+    padding: 50px 25px;
+    text-align: justify;
+}
+
+.chat {
+    height: 100%;
+}
+
+.chat form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat .message { 
+    padding: 15px 35px;
+    margin-left: auto;
+    width: 80%;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-image: radial-gradient(rgba(248, 148, 255, 1) 0%, rgba(248, 148, 255, 1) 70%, #00c5e9 100%) 1;
+    border-top: 0;
+    border-left: 0;
+    color: #fff;
+    font-family: 'Secret Code';
+    margin-top: 25%;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.response-box .right-side {
+    margin: 0 10px;
+}
