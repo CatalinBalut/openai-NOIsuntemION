@@ -34,26 +34,49 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI Quickstart</title>
+        <title>Vorbeste cu ION</title>
       </Head>
 
       <main className={styles.main}>
-        <h3>Salut, sunt asistentul tau virtual ION. </h3>
-        <h3>Astazi eu voi pune intrebarile.</h3>
-        <h3> Scrie Salut pentru a initia discutia cu chatGPT</h3>
-        <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            name="animal"
-            placeholder="scrie salut"
-            value={animalInput}
-            onChange={(e) => setAnimalInput(e.target.value)}
-          />
-          <input type="submit" value="Emite raspuns" />
-        </form>
-        <h3></h3>
-        <h3> Raspunsul lui ION:</h3>
-        <div className={styles.result}>{result}</div>
+      <div className="container">
+            <div className="record-box record-box__working">
+              <div className="left-side">
+                <div className="left-title">Noi suntem Ion in oglinda</div>
+                <div className="left-title-big">VORBESTE CU ION</div>
+                <div className="left-first-message">Ajuta-l sa consilieze</div>
+                <div class="left-first-message">Fi parte din guvernanta Romaniei</div>
+                <div className="left-second-message">Scrie "Salut" pentru a initia discutia</div>
+              </div>
+                <div className="right-side">
+                    <div id="chat" class="chat">
+                        <form onSubmit={onSubmit}>
+                            <input
+                                className="message"
+                                type="text"
+                                name="animal"
+                                placeholder="scrie salut"
+                                value={animalInput}
+                                onChange={(e) => setAnimalInput(e.target.value)}
+                                autoComplete="off"
+                            />
+                            <input type="submit" value="Emite raspuns" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div className="response-box">
+                <div className="right-side">
+                    <div className="left-title-big">Raspunsul lui ION</div>
+                    <div class="left-last-message">Vocea ta conteaza in fiecare zi</div>
+                </div>
+                <div className="response-content">
+                    <div className="response">
+                        {result}
+                    </div>
+                </div>
+          </div>
+        
       </main>
     </div>
   );
