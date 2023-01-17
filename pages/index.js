@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
@@ -31,6 +31,13 @@ export default function Home() {
     }
   }
 
+  async function handleKeyDown(event) {
+
+    if(event.key === "Enter"){
+      await onSubmit(event)
+    }                                                                                                                                                                                                                                                                                                                                                                                                           
+  }
+
   return (
     <div>
       <Head>
@@ -48,6 +55,7 @@ export default function Home() {
             placeholder="scrie salut"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
+            onKeyDown ={(e) => handleKeyDown(e)}
           />
           <input type="submit" value="Emite raspuns" />
         </form>
