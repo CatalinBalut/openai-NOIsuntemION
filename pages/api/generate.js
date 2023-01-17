@@ -19,7 +19,7 @@ export default async function (req, res) {
   if (animal.trim().length === 0) {
     res.status(400).json({
       error: {
-        message: "Please enter a valid animal",
+        message: "Astazi eu voi pune intrebarile",
       }
     });
     return;
@@ -51,12 +51,13 @@ export default async function (req, res) {
 function generatePrompt(animal) {
   const capitalizedAnimal =
     animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-  return `Suggest three names for an animal that is a superhero.
-
-Animal: Cat
-Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-Animal: Dog
-Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-Animal: ${capitalizedAnimal}
-Names:`;
+  return `Salut. Astazi vei fi asistentul meu guvernamental virtual. 
+  Rolul tau este sa imi pui intrebari despre ce nemultumiri am eu in tara in care traiesc, Romania. 
+  Daca te voi intrebare eu ceva tu imi vei raspunde de fiecare data “Astazi eu pun intrebarile” urmat de o intrebare despre nemultumirile mele in Romania cum ar fi “Ce ti-ai dori sa ia in considerare guvernul in urmatoarele 6 luni?”. 
+  Cand eu voi scrie “Salut!”  tu vei incepe. 
+  Dupa trei intrebari puse de tine si trei raspunsuri de la mine imi vei multumi si vei spune ca ai luat in considerare nemultumirile mele si vei transmite mai departe administratiei.
+  In cazul in care spun "resetare" Vom incepe de la inceput sesiunea si va trebui sa scriu "Salut!"
+${capitalizedAnimal}`;
 }
+
+
