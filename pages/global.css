@@ -12,8 +12,12 @@ body {
     background: #08082b;
     min-height: 100vh;
 }
-.record-box,
-.response-box {
+.container {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+.record-box {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -51,8 +55,7 @@ body {
     right: -215px;
 }
 
-.record-box.record-box__working,
-.response-box {
+.record-box.record-box__working {
     width: 800px;
     background: linear-gradient(90deg,
       rgba(248, 148, 255, 0.35) 0%,
@@ -158,18 +161,8 @@ body {
     order: 3;
 }
 
-.response-box {
-    align-items: center;
-    flex-direction: row-reverse;
-}
-
-.response-box h3 {
-    color: #fff;
-}
-
 .response-content {
     height: 345px;
-    width: 55%;
     background: #08082b;
     border-radius: 108px;
     overflow-y: auto;
@@ -217,4 +210,750 @@ input:focus-visible {
 
 .response-box .right-side {
     margin: 0 10px;
+}
+
+.how-it-works {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.how-it-works__title {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    height: 72px;
+    color: #000000;
+}
+  
+.how-it-works__text {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #737373;
+    mix-blend-mode: normal;
+}
+  
+.how-it-works-box--3 .how-it-works__title {
+    margin-top: 100px;
+}
+    
+.how-it-works-box {
+    position: relative;
+}
+  
+.how-it-works-box--1::after {
+    content: '';
+    position: absolute;
+    width: 302px;
+    height: 138px;
+    left: 200px;
+    top: 220px;
+}
+  
+.how-it-works-box--2::after {
+    content: '';
+    position: absolute;
+    width: 302px;
+    height: 138px;
+    left: 100px;
+    top: -50px;
+}
+  
+footer {
+    padding-top: 32px;
+    background: #08082b;
+}
+  
+footer .separator {
+    width: 100%;
+    height: 24px;
+    background-image: url(assets/Separator.png);
+    background-size: 100%;
+}
+  
+.sub-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+  
+.sub-footer .cp {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    opacity: 0.6;
+}
+  
+.sub-footer a {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    opacity: 0.6;
+    margin-right: 32px;
+}
+  
+footer .menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 34px;
+}
+  
+  footer .menu .menu__item {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    opacity: 0.4;
+    margin-right: 40px;
+  }
+  
+  footer .menu .menu__item.menu__item--active {
+    opacity: 1;
+  }
+  
+  footer .logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  footer .logos img {
+    height: 48px;
+  }
+  
+  footer .logos img:first-child {
+    height: auto;
+    max-width: 250px
+  }
+  
+  footer .logos img.humans {
+    height: auto;
+    margin-left: 24px;
+    max-width: 140px;
+  }
+  
+  .sustinere {
+    position: relative;
+    width: 100%;
+  }
+  
+  .sustinere .social {
+    position: absolute;
+    width: 184px;
+    height: 24px;
+    right: 0px;
+    top: 60px;
+    opacity: 0.6;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .sustinere .social img {
+    height: auto;
+    max-width: 30px;
+    margin-left: 16px;
+  }
+  
+  .sustinere p {
+    /* Text/S/Light */
+  
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+  
+    /* Content/onBlack */
+  
+    color: #ffffff;
+  
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .steps-sections {
+    width: 100%;
+  
+    background: #08082b;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .steps-title {
+    /* Headings/H1 */
+  
+    font-family: 'Secret Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    /* identical to box height, or 125% */
+  
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  
+    /* Content/onBlack */
+  
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  
+  .steps-content {
+    /* Text/Large/Regular */
+  
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+  
+    /* Content / Primary */
+  
+    color: #000000;
+    margin-bottom: 75px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+  
+  .step {
+    max-width: 400px;
+  }
+  
+  .steps .step {
+    position: relative;
+    display: block;
+  }
+
+  .steps .step.step--1 .step__icon img {
+    max-width: 374px;
+    height: auto;
+  }
+  
+  .steps .step.step--1::after {
+    content: '';
+    position: absolute;
+    width: 241px;
+    height: 168px;
+    top: -60px;
+    left: 66px;
+  }
+  
+  .steps .step.step--3::after {
+    content: '';
+    position: absolute;
+    width: 241px;
+    height: 168px;
+    top: -60px;
+    left: 66px;
+  }
+  
+  .steps .step.step--2::after {
+    content: '';
+    position: absolute;
+    width: 202px;
+    height: 79px;
+    top: 66px;
+    left: 100px;
+  }
+  
+  .steps .step .step__nr {
+    /* Titles/Desktop/H5 Underline */
+  
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+  
+    text-decoration-line: underline;
+  
+    /* Content/Secondary */
+  
+    color: #737373;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .steps .step .step__title {
+    /* Headings/H2 */
+  
+    font-family: 'Secret Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+  
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  
+    /* Content/onBlack */
+  
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .steps .step .step__text {
+    /* Text/Medium/Regular */
+    /* Text/S/Light */
+  
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+  
+    /* Content/onBlack */
+  
+    color: #ffffff;
+  
+    mix-blend-mode: normal;
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 720px) {
+    #sendPhoto {
+      left: 60px !important;
+    }
+    #startbutton2 {
+      position: relative;
+      bottom: 67px !important;
+      left: 150px !important;
+  
+    }
+    .open-camera-button{
+      width: 180px;
+      height: 32px;
+    }
+    #video {
+         width: 440px !important;
+      height: 400px!important;
+      right: 70px;
+      bottom: 50px
+    }
+    #startbutton {
+        bottom:150px!important;
+    }
+  
+    /* O colapsable */
+    .record-box.record-box__working, .photo-box.photo-box__working,
+    .chat-box.chat-box__working {
+      width: 325px;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+  }
+  .left-second-message {
+    width: 185px; 
+  }
+  .record-box .right-side, .photo-box .right-side,
+  .chat-box .right-side {
+    width: 300px;
+    margin-left: 13px;
+    height: 300px;
+    top: -50px;
+  
+  }
+  .record-box .left-side, .photo-box .left-side,
+  .chat-box .left-side {
+   
+    padding-top: 30px;
+  
+    width: auto;
+  }
+  .voice.visualizer {
+    margin-top:0px !important
+  }
+  .record-box.record-box__success, .photo-box.photo-box__success,
+  .chat-box.chat-box__success {
+  
+    width: 325px;
+    height: 500px;
+  }
+  
+  .record-box__working .right-side, .photo-box__working .right-side,
+  .chat-box__working .right-side {
+   
+    top: -60px;
+  }
+  .record-box__success .right-side, .photo-box__success .right-side,
+  .chat-box__success .right-side  {
+   
+    top: 0px;
+  }
+  /* O colapsable */
+  
+  
+    .details-container {
+      flex-direction: column-reverse !important;
+    }
+    .buttons_app {
+      flex-direction: column;
+    }
+  
+    header {
+      max-width: 100%;
+    }
+  
+    footer .logos {
+      flex-direction: column;
+    }
+  
+    .sustinere .social {
+      top: 0;
+    }
+  
+    .container {
+      box-sizing: border-box;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  
+    .steps {
+      flex-direction: column;
+    }
+  
+    .record-section {
+      height: auto;
+    }
+  }
+  
+  .intro-details {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+  
+  
+    /* Content/onBlack */
+  
+    color: #FFFFFF;
+  
+    opacity: 0.8;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-bottom: 20px;
+  }
+  
+  .extra-details {
+    font-family: 'Secret Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+  
+    text-transform: uppercase;
+  
+    /* Content/onBlack */
+  
+    color: #FFFFFF;
+  
+    opacity: 0.6;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+  margin-bottom: 20px;
+  }
+  
+  .title-details {
+    font-family: 'Secret Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    /* or 133% */
+  
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  
+    color: #FFFFFF;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-bottom: 20px;
+  }
+  
+  .final-datails {
+    font-family: 'Alliance No.2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+  
+  
+    /* Content/onBlack */
+  
+    color: #FFFFFF;
+  
+    opacity: 0.8;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
+  .details-section {
+    width: 100%;
+    background: #08082b;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .videoEX{
+  width: 560px;
+  height: 370px;
+  background: #030321;
+  border-radius: 24px;
+  }
+  
+  .details-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+@media (min-width: 720px) {
+  #menuToggle {
+    display: none;
+  }
+}
+
+/* MENU */
+@media (max-width: 720px) {
+  .videoEX{
+    width: calc(100% - 10px);
+  }
+  header .menu {
+    display: none;
+  }
+
+  #menuToggle {
+    position: relative;
+    display: flex;
+    z-index: 9;
+    -webkit-user-select: none;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Background / White */
+    border: 1px solid #d9d9d9;
+    background: #ffffff;
+    /* Shadows/Black - M */
+
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 200px;
+    width: 56px;
+    height: 56px;
+    right: 25px;
+  }
+
+
+  #menuToggle input {
+    display: block;
+    width: 56px;
+    height: 56px;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    margin: 0px;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+  * Just a quick hamburger
+  */
+  #menuToggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #000;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 2px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    background: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    opacity: 0.55s ease;
+    top: 15px;
+  }
+
+  #menuToggle span:nth-child(4) {
+    margin-bottom: 0px;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /*
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+  #menuToggle input:checked~span {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform-origin: 0 100%;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #fc512f;
+  }
+
+  /*
+  * But let's hide the middle one.
+  */
+  #menuToggle input:checked~span:nth-last-child(4) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+  * Ohyeah and the last one should go the other direction
+  */
+  #menuToggle input:checked~span:nth-last-child(3) {
+    transform: rotate(-45deg) translate(0, 0px);
+  }
+
+  #menu-top-menu {
+    position: absolute;
+    width: 100vw;
+    margin-left: calc(-100vw);
+    padding: 24px;
+    padding-top: 24px;
+    background: #fff;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    border-top: 1px solid #9ff2ff;
+    transform: translate(calc(-200% + 60px), 0);
+    transition: all 1s cubic-bezier(0.77, 0.2, 0.05, 1);
+    top: -50px;
+    flex-direction: column;
+    height: calc(100vh + 50px);
+    padding-top: 200px;
+  }
+
+  #menu-top-menu ul {
+    margin: 0;
+  }
+
+  /*
+  * And let's slide it in from the left
+  */
+  #menuToggle input:checked~#menu-top-menu {
+    transform: translate(calc(-50% + 74px), 0);
+    margin-left: -44px;
+    padding-bottom: 52px;
+  }
+
+  .mj-meniu.mj-meniu--black .mj-meniu__item .mj-meniu__item__link {
+    color: #000;
+  }
+
+  .mj-meniu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 40px;
+    padding-left: 0px;
+  }
+
+  .mj-meniu .mj-meniu__item .mj-meniu__item__link {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    opacity: 0.4;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in;
+  }
+
+  .mj-meniu .mj-meniu__item .mj-meniu__item__link:hover {
+    opacity: 0.8;
+  }
+
+  .mj-meniu .mj-meniu__item .mj-meniu__item__link.mj-meniu__item__link--active {
+    opacity: 1;
+  }
+
+  .mj-meniu .mj-meniu__item .mj-meniu__item__link {
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+
+  header .menu__tag_open {
+
+    position: relative;
+    top: -100px;
+    display: inline-flex;
+  }
+
+  .menu__tag_open .blue_underline {
+    color: rgba(54, 145, 255, 1);
+    margin-left: 5px !important;
+    top: 0 !important;
+  }
 }
