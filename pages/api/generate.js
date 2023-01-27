@@ -15,8 +15,8 @@ export default async function (req, res) {
     return;
   }
 
-  const animal = req.body.animal || '';
-  if (animal.trim().length === 0) {
+  const message = req.body.message || '';
+  if (message.trim().length === 0) {
     res.status(400).json({
       error: {
         message: "Astazi eu voi pune intrebarile",
@@ -28,7 +28,7 @@ export default async function (req, res) {
   try {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: generatePrompt(animal),
+      prompt: generatePrompt(message),
       temperature: 0.2,
       max_tokens: 1024,
     });
@@ -49,9 +49,10 @@ export default async function (req, res) {
   }
 }
 
-function generatePrompt(animal) {
-  const capitalizedAnimal =
-    animal[0].toUpperCase() + animal.slice(1).toLowerCase();
+
+function generatePrompt(message) {
+  const capitalizedMessage =
+    message[0].toUpperCase() + message.slice(1).toLowerCase();
   return `Astazi vei fi asistentul meu guvernamental virtual.
   Cand eu voi scrie “Salut!”  tu vei incepe.
   Rolul tau este sa imi pui intrebari despre ce nemultumiri am eu in tara in care traiesc, Romania. 
@@ -73,7 +74,7 @@ function generatePrompt(animal) {
   semnalata de mine imi vei pune in acelasi raspuns si urmatoarea intrebare.
   Foarte important ca dupa fiecare raspuns al meu tu sa dezvolti putin problema pe care eu am sugerat-o apoi sa pui o alta intrebare despre altceva. Exceptia face cand scriu "salut".
   Acum incepem, comporta-te cum am descris mai sus:
-${capitalizedAnimal}`;
+${capitalizedMessage}`;
 }
 
 
